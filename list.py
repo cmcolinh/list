@@ -1,12 +1,13 @@
 import time
 import csv 
 import sys
+from collections import OrderedDict
 program = []
 toon = {}
 mob = {}
-luco = {"id":"A5A0", "name":"Luco", "x":20123, "y":11343}
-wice = {"id":"A5A1", "name":"Wice", "x":20122, "y":11341}
-fila = {"id":"A5A2", "name":"Fila", "x":20222, "y":11341}
+luco = {"id":"A5A0", "name":"Luco", "x":20123, "y":11343, "connable":["A5A0","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]}
+wice = {"id":"A5A1", "name":"Wice", "x":20122, "y":11341, "connable":["A5A1","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]}
+fila = {"id":"A5A2", "name":"Fila", "x":20222, "y":11341, "connable":["A5A2","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""]}
 
 spiritmaster_clegg = {"id":"A5A3", "name":"Spiritmaster Clegg", "x":19946, "y":11150}
 
@@ -89,6 +90,10 @@ def load_program():
             program[frame].append(record)
         rownum += 1
     ifile.close()
+
+def calculate_connables(toon):
+    
+    
     
 
         
@@ -125,6 +130,7 @@ print (end - start)
 
 print(toon)
 print(mob)
+print(luco)
 
 
 #print (sub_zone[100][56])
